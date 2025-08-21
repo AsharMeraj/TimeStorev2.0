@@ -35,7 +35,7 @@ export default function Navbar() {
 
             <main className={`flex items-center rounded-l-[2rem] justify-center h-screen width ml-2 fixed top-0 duration-700 z-10  ${showMobileNav ? 'translate-x-[0] ' : 'translate-x-[150%]'}`}>
                 <QueryClientProvider client={queryClient}>
-                    <MobileNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} />
+                    <MobileNavbar setShowMobileNav={setShowMobileNav} />
                 </QueryClientProvider>
 
             </main>
