@@ -2,7 +2,6 @@ import Button from '@/app/_components/Button/Button'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import Close from '/public/Images/close.png'
 import danger from '/public/Images/danger.png'
 
 const page = () => {

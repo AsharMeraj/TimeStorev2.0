@@ -13,7 +13,7 @@ const CartCard = () => {
     const { cartItems } = useAppSelector((state: RootState) => state.cart)
     const dispatch = useAppDispatch()
     const updateCartItems = (e: React.ChangeEvent<HTMLSelectElement>, key: string, item: ProdList) => {
-        let payload = {
+        const payload = {
             key: key,
             val: key === "quantity" ? parseInt(e.target.value) : e.target.value,
             data: item

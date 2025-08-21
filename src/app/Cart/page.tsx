@@ -9,7 +9,7 @@ import { makePaymentRequest } from '../configs/PaymentRequest';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
 
-const page = () => {
+const CartPage = () => {
     const [loading, setLoading] = useState<Boolean>(false)
     const { cartItems } = useAppSelector((state: RootState) => state.cart)
 
@@ -75,4 +75,4 @@ const page = () => {
     )
 }
 
-export default page
+export default CartPage
