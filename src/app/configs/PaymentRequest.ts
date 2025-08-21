@@ -1,5 +1,10 @@
+import { CartItem } from "../Store/cartSlice";
 
-export const makePaymentRequest = async (endpoint: string, payload: any) => {
+interface payloadType {
+    products: CartItem[]
+}
+
+export const makePaymentRequest = async (endpoint: string, payload : payloadType) => {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE_URL}/${endpoint}`, {
             method: 'POST',

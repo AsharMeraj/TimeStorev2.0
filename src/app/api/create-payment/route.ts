@@ -43,11 +43,29 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ stripeSession: session.id });
-  } catch (error: any) {
-    console.error("Error in create-payment API:", error);
+  } 
+  // catch (error: unknown) {
+  //   console.error("Error in create-payment API:", error);
+  //   return NextResponse.json(
+  //     { error: error.message || "Something went wrong" },
+  //     { status: 500 }
+  //   );
+  // }
+  catch (error: unknown) {
+  console.error("Error in create-payment API:", error);
+
+  // Safely check if it's an Error object
+  if (error instanceof Error) {
     return NextResponse.json(
-      { error: error.message || "Something went wrong" },
+      { error: error.message },
       { status: 500 }
     );
   }
+
+  // Fallback for non-Error cases
+  return NextResponse.json(
+    { error: "Something went wrong" },
+    { status: 500 }
+  );
+}
 }

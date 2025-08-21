@@ -17,7 +17,7 @@ type PropType = {
 }
 const NavComponent = (props: PropType) => {
     const [showSubmenu, setShowSubmenu] = useState<boolean>(false)
-    const { cartItems } = useAppSelector((state: any) => state.cart)
+    const { cartItems } = useAppSelector((state) => state.cart)
     const [allProducts, setAllProducts] = useState<ProdList[]>([])
 
     const AllCategories = allProducts.map((items) => (
