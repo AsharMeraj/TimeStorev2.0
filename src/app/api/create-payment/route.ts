@@ -37,8 +37,8 @@ export async function POST(req: Request) {
       shipping_address_collection: { allowed_countries: ["PK"] },
       payment_method_types: ["card"],
       mode: "payment",
-      success_url: `${process.env.CLIENT_URL}/payment/success`,
-      cancel_url: `${process.env.CLIENT_URL}/payment/failed`,
+      success_url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/payment/success`,
+      cancel_url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/payment/failed`,
       line_items: lineItems,
     });
 
