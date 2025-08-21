@@ -7,16 +7,15 @@ import cart from '/public/Images/cart.png'
 import { useAppSelector } from '../Store/hooks';
 import { ProdList } from '../configs/ProdListType';
 import { FetcherProducts } from '../configs/FetcherProducts';
-type ChildType = {
-    showMobileNav: boolean,
+type ChildType = { 
     setShowMobileNav: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
 
 
-const MobileNavbar: React.FC<ChildType> = ({ setShowMobileNav, showMobileNav }) => {
-    const { cartItems } = useAppSelector((state: any) => state.cart)
+const MobileNavbar: React.FC<ChildType> = ({ setShowMobileNav }) => {
+    const { cartItems } = useAppSelector((state) => state.cart)
     const [showSubmenu, setShowSubmenu] = useState<boolean>(false)
     const [allProducts, setAllProducts] = useState<ProdList[]>([])
 

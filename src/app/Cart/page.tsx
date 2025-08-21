@@ -10,7 +10,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY 
 
 
 const CartPage = () => {
-    const [loading, setLoading] = useState<Boolean>(false)
+    const [loading, setLoading] = useState<boolean>(false)
     const { cartItems } = useAppSelector((state: RootState) => state.cart)
 
     const totalPrice = useMemo(() => {

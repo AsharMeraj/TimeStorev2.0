@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
-import { MainDatum, SizeEnum } from '../ProductPage/ProductList/ProductType';
-import { ProdList } from '../utils/ProdListType';
+import { ProdList } from '../configs/ProdListType';
 
-// Define the CartItem and CartState interfaces
+
 export interface CartItem {
   data: ProdList;
   quantity: number;
@@ -11,17 +10,17 @@ export interface CartItem {
   singlePrice: number
 }
 
-interface CartState {
+export interface CartState {
   cartItems: CartItem[];
 }
 
-interface UpdateCart {
+export interface UpdateCart {
   data: ProdList;
   val: string | number;
   key: string;
 }
 
-interface RemoveItem {
+export interface RemoveItem {
   data: ProdList
 }
 
