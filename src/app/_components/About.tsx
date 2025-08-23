@@ -20,35 +20,35 @@ const about = () => {
             <main className='flex w-fit gap-[0rem] max-[1290px]:w-full max-[1290px]:gap-0 max-[1290px]:justify-between max-lg:flex-col max-lg:w-fit max-lg:items-center max-lg:gap-10'>
                 <div className='flex flex-col justify-center gap-14'>
 
-                    <MotionDiv className='flex flex-col gap-6 max-lg:gap-4 w-[18rem]  border- border-black max-lg:w-full items-center'>
+                    <div className='flex flex-col gap-2 w-[18rem]  border- border-black max-lg:w-full items-center'>
                         <Image alt='/' className='w-[3rem]' src={setting} />
                         <h2 className='text-[1.4rem] font-semibold max-[840px]:text-[1.2rem]'>High Quality</h2>
-                        <p className='text-center'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae vero beatae consequatur quis amet eius! Lorem ipsum dolor sit amet </p>
-                    </MotionDiv>
+                        <p className='text-center md:text-start'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae vero beatae consequatur quis amet eius! Lorem ipsum dolor sit amet Lorem ipsum dolor </p>
+                    </div>
 
-                    <MotionDiv className='flex flex-col gap-6 max-lg:gap-4 w-[18rem]  border- border-black max-lg:w-full items-center'>
+                    <div className='flex flex-col gap-2 w-[18rem]  border- border-black max-lg:w-full items-center'>
                         <Image alt='/' className='w-[3rem]' src={perform} />
                         <h2 className='text-[1.4rem] font-semibold max-[840px]:text-[1.2rem]'>High Performance</h2>
-                        <p className='text-center'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae vero beatae consequatur quis amet eius! Lorem ipsum dolor sit amet </p>
-                    </MotionDiv>
+                        <p className='text-center md:text-start'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae vero beatae consequatur quis amet eius! Lorem ipsum dolor sit amet Lorem ipsum dolor </p>
+                    </div>
 
                 </div>
 
-                <MotionDiv className='w-fit flex items-center'>
-                    <Image className='w-[30rem] max-[840px]:w-[25rem]' alt='/' src={watch2} />
-                </MotionDiv>
+                <div className='w-fit flex items-center'>
+                    <Image className='w-[28rem]' alt='/' src={watch2} />
+                </div>
 
                 <div className='flex flex-col justify-center gap-14'>
-                    <MotionDiv className='flex flex-col gap-6 max-lg:gap-4 w-[18rem]  border- border-black max-lg:w-full items-center'>
+                    <div className='flex flex-col gap-2 w-[18rem]  border- border-black max-lg:w-full items-center'>
                         <Image alt='/' className='w-[3rem]' src={water} />
                         <h2 className='text-[1.4rem] font-semibold max-[840px]:text-[1.2rem]'>Water Resistanct</h2>
-                        <p className='text-center'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae vero beatae consequatur quis amet eius! Lorem ipsum dolor sit amet </p>
-                    </MotionDiv>
-                    <MotionDiv className='flex flex-col gap-6 max-lg:gap-4 w-[18rem]  border- border-black max-lg:w-full items-center'>
+                        <p className='text-center md:text-end'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae vero beatae consequatur quis amet eius! Lorem ipsum dolor sit amet Lorem ipsum dolor </p>
+                    </div>
+                    <div className='flex flex-col gap-2 w-[18rem]  border- border-black max-lg:w-full items-center'>
                         <Image alt='/' className='w-[3rem]' src={shield} />
                         <h2 className='text-[1.4rem] font-semibold max-[840px]:text-[1.2rem]'>Reliable</h2>
-                        <p className='text-center'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae vero beatae consequatur quis amet eius! Lorem ipsum dolor sit amet </p>
-                    </MotionDiv>
+                        <p className='text-center md:text-end'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae vero beatae consequatur quis amet eius! Lorem ipsum dolor sit amet Lorem ipsum dolor </p>
+                    </div>
                 </div>
             </main>
 

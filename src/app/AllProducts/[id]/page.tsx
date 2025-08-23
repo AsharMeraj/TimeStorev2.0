@@ -1,12 +1,12 @@
 import React from 'react';
 import ProductDetailsCarousel from './ProductDetailsCarousel';
-import RelatedProducts from './RelatedProducts';
 import SizeSelect from './SizeSelect';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ProdList } from '@/app/configs/ProdListType';
 import { GetDiscountedPrice } from '@/app/configs/Discount';
 import { FetcherProducts } from '@/app/configs/FetcherProducts';
+import RelatedProducts from '@/app/_components/RelatedProducts';
 
 interface ProductPageProps {
   params: Promise<{ id: string }>
@@ -24,6 +24,10 @@ const ProductPage = async ({ params }: ProductPageProps) => {
   }
   const SpecificProduct = productFunction(+id)
   const singleProduct: ProdList = SpecificProduct[0]
+
+  const similarProducts = allProducts?.filter((item) => {
+    return item.Category.toLowerCase() === singleProduct?.Category.toLowerCase()
+  })
 
   return (
     <>
@@ -56,7 +60,9 @@ const ProductPage = async ({ params }: ProductPageProps) => {
           {/* --------right column end-------- */}
         </div>
       </div>
-      <RelatedProducts singleproducts={singleProduct} allproducts={allProducts} />
+      <div className='mt-8 md:mt-20'>
+        <RelatedProducts singleProduct={singleProduct} allproducts={similarProducts} />
+      </div>
     </>
   );
 };

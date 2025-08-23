@@ -1,12 +1,10 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import watch from '/public/Images/watchbg.png'
 import Button from './Button/Button'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import watch1 from '/public/Images/watch1.png'
+import watchbg from '/public/Images/watchbg.png'
 
 const variants = {
   hidden: { opacity: 0, x: "-4rem" },
@@ -70,7 +68,7 @@ const HomePage = () => {
             ease: 'easeInOut'
           }}
         >
-          <Image alt='/' className=' h-full w-full rounded-br-[45%] rounded-bl-[56%]' priority={true} src={watch} />
+          <Image alt='/' className=' h-full w-full rounded-br-[45%] rounded-bl-[56%]' priority={true} src={watchbg} />
         </motion.span>
       </main>
 

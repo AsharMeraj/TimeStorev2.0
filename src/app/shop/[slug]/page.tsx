@@ -14,7 +14,7 @@ const page = async ({ params }: ParamsType) => {
     })
     return (
 
-            <section className='flex justify-center'>
+            <section className='flex justify-center px-4'>
                 <main className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  my-[4rem] gap-[3rem]'>
                     {
                         productFunction?.map((item) => {

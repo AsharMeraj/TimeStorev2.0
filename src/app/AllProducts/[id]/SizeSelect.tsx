@@ -24,7 +24,7 @@ const SizeSelect = (props: propType) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "light",
             transition: Bounce,
             })
     }
