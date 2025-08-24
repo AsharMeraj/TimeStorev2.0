@@ -55,8 +55,8 @@ const CartPage = () => {
                                 </div>
                                 <p className='max-[590px]:text-sm'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto libero rerum, ad consequuntur labore fuga similique, qui </p>
                                 <div className='cursor-pointer w-full m-auto'>
-                                    <button onClick={handlePayment} className={`w-full cursor-pointer active:scale-95 bg-[var(--primary)] text-white font-semibold px-[2rem] py-[1rem] flex items-center ${loading ? "justify-between" : "justify-center"} flex-row`}>
-                                        <h2 className='whitespace-nowrap'>PROCEED TO CHECKOUT</h2>
+                                    <button onClick={handlePayment} className={`w-full cursor-pointer active:scale-95 bg-[var(--primary)] text-white font-semibold sm:text-base text-sm sm:px-[2rem] px-[1.5rem] sm:py-[1rem] py-[1rem] flex items-center ${loading ? "justify-between" : "justify-center"} flex-row`}>
+                                        <h2 className='sm:whitespace-nowrap'>PROCEED TO CHECKOUT</h2>
                                         {
                                             loading? <img width={25} src='/spinner.svg' />: ""
                                         }
