@@ -1,11 +1,12 @@
 'use client';
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import CartCard from './CartCard'
 import { useAppSelector } from '../Store/hooks'
 import { RootState } from '../Store/store';
 import { loadStripe } from '@stripe/stripe-js';
 import { makePaymentRequest } from '../configs/PaymentRequest';
 import Image from 'next/image';
+import { useSearchParams } from 'next/dist/client/components/navigation';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
@@ -13,6 +14,14 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY 
 const CartPage = () => {
     const [loading, setLoading] = useState<boolean>(false)
     const { cartItems } = useAppSelector((state: RootState) => state.cart)
+
+    const searchParams = useSearchParams();
+
+    useEffect(() => {
+        if (searchParams.get("/payment/success") || searchParams.get("/payment/failed")) {
+          setLoading(false); // reset loading if redirected back
+        }
+      }, [searchParams]);
 
     const totalPrice = useMemo(() => {
         return cartItems.reduce((total, val) => total + val.data.Price, 0)
