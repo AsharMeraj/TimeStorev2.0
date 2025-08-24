@@ -5,6 +5,7 @@ import { useAppSelector } from '../Store/hooks'
 import { RootState } from '../Store/store';
 import { loadStripe } from '@stripe/stripe-js';
 import { makePaymentRequest } from '../configs/PaymentRequest';
+import Image from 'next/image';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
@@ -58,7 +59,7 @@ const CartPage = () => {
                                     <button onClick={handlePayment} className={`w-full cursor-pointer active:scale-95 bg-[var(--primary)] text-white font-semibold sm:text-base text-sm sm:px-[2rem] px-[1.5rem] sm:py-[1rem] py-[1rem] flex items-center ${loading ? "justify-between" : "justify-center"} flex-row`}>
                                         <h2 className='sm:whitespace-nowrap'>PROCEED TO CHECKOUT</h2>
                                         {
-                                            loading? <img width={25} src='/spinner.svg' />: ""
+                                            loading? <Image width={25} height={25} src='/spinner.svg' alt='loading' />: ""
                                         }
                                     </button>
                                 </div>

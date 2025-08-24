@@ -8,16 +8,6 @@ import showcase4 from '/public/Images/showcase4.png'
 const Showcase = () => {
     return (
         <section className='grid place-items-center min-[840px]:mb-[10rem] mb-[5rem]'>
-            {/* <div className='grid grid-cols-[3fr,1fr] h-fit max-lg:grid-cols-1 w-full gap-6 max-lg:gap-2 justify-between'>
-                <main className='grid grid-cols-[2fr,1fr] max-lg:grid-cols-[1fr,1fr] gap-6 max-lg:gap-2'>
-                    <Image className='w-screen h-[38rem] min-[115.625rem]:h-[42rem] max-lg:h-[28rem] object-cover' alt='/' src={showcase1} />
-                    <Image className='w-screen h-[38rem] min-[115.625rem]:h-[42rem] max-lg:h-[28rem] object-cover' alt='/' src={showcase3} />
-                </main>
-                <main className='grid grid-rows-[1fr,1fr] max-lg:grid-rows-1 max-lg:grid-cols-[1fr,1fr] gap-6 max-lg:gap-2'>
-                    <Image className='w-screen h-[18.2rem] min-[115.625rem]:h-[20.2rem] object-cover' alt='/' src={showcase2} />
-                    <Image className='w-screen h-[18.2rem] min-[115.625rem]:h-[20.2rem] object-cover' alt='/' src={showcase4} />
-                </main>
-            </div> */}
             <div className='grid lg:grid-cols-[3fr_1fr] h-fit grid-cols-1 w-full lg:gap-6 gap-2 justify-between'>
                 <main className='grid lg:grid-cols-[2fr_1fr] grid-cols-[1fr_1fr] lg:gap-6 gap-2'>
                     <Image className='w-screen lg:h-[38rem] 2xl:h-[42rem] h-[28rem] object-cover' alt='/' src={showcase1} />
@@ -28,7 +18,7 @@ const Showcase = () => {
                     <Image className='w-screen h-[18.2rem] 2xl:h-[20.2rem] object-cover' alt='/' src={showcase4} />
                 </main> 
             </div>
-        </section >
+        </section>
     )
 }
 
