@@ -11,7 +11,8 @@ export const makePaymentRequest = async (endpoint: string, payload : payloadType
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(payload),
+            cache: "no-store"
         });
 
         if (!res.ok) {
