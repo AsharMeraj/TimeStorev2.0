@@ -35,6 +35,9 @@ const CartPage = () => {
                 sessionId: res.stripeSession,
             });
             setLoading(false)
+            if (loading === true) {
+                console.log("loading is true")
+            }
         } catch (error) {
             setLoading(false);
             console.error("Error in handlePayment:", error);
