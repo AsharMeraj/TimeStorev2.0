@@ -19,9 +19,9 @@ const CartPage = () => {
 
     useEffect(() => {
         if (searchParams.get("/payment/success") || searchParams.get("/payment/failed")) {
-          setLoading(false); // reset loading if redirected back
+            setLoading(false); // reset loading if redirected back
         }
-      }, [searchParams]);
+    }, [searchParams]);
 
     const totalPrice = useMemo(() => {
         return cartItems.reduce((total, val) => total + val.data.Price, 0)
@@ -44,9 +44,10 @@ const CartPage = () => {
                 sessionId: res.stripeSession,
             });
             setLoading(false)
-            if (loading === true) {
-                console.log("loading is true")
-            }
+
+            window.onpageshow = () => {
+                window.location.reload();
+            };
         } catch (error) {
             setLoading(false);
             console.error("Error in handlePayment:", error);
@@ -71,7 +72,7 @@ const CartPage = () => {
                                     <button onClick={handlePayment} className={`w-full cursor-pointer active:scale-95 bg-[var(--primary)] text-white font-semibold sm:text-base text-sm sm:px-[2rem] px-[1.5rem] sm:py-[1rem] py-[1rem] flex items-center ${loading ? "justify-between" : "justify-center"} flex-row`}>
                                         <h2 className='sm:whitespace-nowrap'>PROCEED TO CHECKOUT</h2>
                                         {
-                                            loading? <Image width={25} height={25} src='/spinner.svg' alt='loading' />: ""
+                                            loading ? <Image width={25} height={25} src='/spinner.svg' alt='loading' /> : ""
                                         }
                                     </button>
                                 </div>
