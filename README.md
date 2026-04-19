@@ -76,8 +76,3 @@ The cart runs entirely on Redux Toolkit — add items, bump quantities up or dow
 | Data Fetching | Server Components + React Query |
 | Deployment | Vercel |
 
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE). Fork it, build on it, make it yours. ✌️
